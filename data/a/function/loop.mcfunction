@@ -5,8 +5,12 @@ execute store result score @e[type=minecraft:armor_stand,limit=1,tag=score] tpco
 
 effect give @a[scores={death=18..}] resistance 1 255 true
 effect give @a[scores={death=18..}] mining_fatigue 1 254 true
-effect give @a[x=-10,y=290,z=-10,dx=20,dy=20,dz=20] mining_fatigue 1 254 true
-effect give @a[x=-10,y=290,z=-10,dx=20,dy=20,dz=20] resistance 1 254 true
+execute positioned 12.79 308.35 0.70 run effect give @a[distance=..30] mining_fatigue 1 254 true
+execute positioned 12.79 308.35 0.70 run effect give @a[distance=..30] resistance 1 254 true
+execute positioned 22.41 309.99 0.39 run effect give @a[distance=..10] saturation 1 254 true
+execute in minecraft:the_nether positioned 11.08 129.00 4.82 run effect give @a[distance=..20] resistance 1 254 true
+execute in minecraft:the_nether positioned 11.08 129.00 4.82 run effect give @a[distance=..20] mining_fatigue 1 254 true
+execute in minecraft:the_nether positioned 11.08 129.00 4.82 run effect give @a[distance=..20] saturation 1 254 true
 scoreboard players add @e[type=armor_stand,tag=score,scores={round=1..}] score 1
 execute as @e[tag=score,type=armor_stand,scores={score=0..10}] at @a run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace glass
 execute as @e[tag=score,type=armor_stand,scores={score=-10..0}] run scoreboard players set @a death 17

@@ -29,9 +29,9 @@ tellraw @a [{"bold":true,"color":"red","underline":true,"text":"Fully automatic 
 
 
 # create spawn platform
-fill 10 300 10 -10 319 -10 minecraft:barrier hollow
-fill -9 319 -9 9 319 9 air
-fill -9 300 -9 9 300 9 minecraft:grass_block
+schedule function a:zzzspawn 5t
+execute in the_nether run forceload add -13 -14 25 24
+place template a:lobbyoverworld -12 295 -14
 setworldspawn 0 302 0
 spawnpoint @a 0 302 0
 tp @a 0 302 0
