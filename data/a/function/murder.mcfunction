@@ -7,6 +7,7 @@ schedule clear a:zzzhealthcalc3
 schedule clear a:zzzhealthcalc2
 schedule clear a:victory
 schedule clear a:victory2
+schedule clear a:zzzfiveschecker
 scoreboard players reset @e
 scoreboard players set @a health -69420
 scoreboard players set @a death 1785

@@ -12,6 +12,7 @@ execute unless score @e[type=minecraft:armor_stand,limit=1,tag=score] left match
 execute if score @e[type=minecraft:armor_stand,limit=1,tag=score] left matches 1 run title @a title [{"color":"gold","selector":"@a[scores={health=0..}]"},{"text":" is the winner!"}]
 execute if score @e[type=minecraft:armor_stand,limit=1,tag=score] left matches 1 run tellraw @a [{"color":"gold","selector":"@a[scores={health=0..}]"},{"text":" is the winner!"}]
 execute if score @e[type=minecraft:armor_stand,limit=1,tag=score] left matches 1 run execute at @a run playsound minecraft:ui.toast.challenge_complete master @a
+execute if score @e[type=minecraft:armor_stand,limit=1,tag=score] left matches 1 run execute at @a run schedule function a:zzzfinal 3s
 execute if score @e[type=minecraft:armor_stand,limit=1,tag=score] left matches 1 run tag @s remove newcheck
 execute as @a run scoreboard players operation @s temp = @s health
 scoreboard objectives remove health
