@@ -15,5 +15,4 @@ If a player joins midway through a match, they are instantly eliminated and put 
 If a player leaves midway through a match, they are able to rejoin as long as the health calculation has not started (nobody is alive and playing)
 
 ## Todo list:
-Publicly shame players for leaving the cage using a title command<br/>
-Detect if players' scoreboards are correct? Sometimes people have the wrong death counter and it leads to issues
+add a spectator feature
