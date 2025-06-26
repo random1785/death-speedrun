@@ -15,4 +15,4 @@ If a player joins midway through a match, they are instantly eliminated and put 
 If a player leaves midway through a match, they are able to rejoin as long as the health calculation has not started (nobody is alive and playing)
 
 ## Todo list:
-add a spectator feature
+none for now!
