@@ -3,6 +3,7 @@ team join a @a
 effect clear @a
 kill @a
 kill @e[type=armor_stand,tag=score]
+kill @e[type=armor_stand,tag=start]
 summon armor_stand 0 330 0 {NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["score"]}
 scoreboard players set @e[type=armor_stand,tag=score] round 0
 scoreboard players set @e[type=armor_stand,tag=score] multi 100

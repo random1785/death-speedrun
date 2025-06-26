@@ -18,4 +18,6 @@ tag @a remove a
 schedule function a:zzzstart1 20t
 gamemode survival @a
 scoreboard players set @a health 500
+scoreboard players set @a[scores={spec=-1785}] health -1785
 scoreboard players set @a temp 500
+scoreboard players set @a[scores={spec=-1785}] temp -1785

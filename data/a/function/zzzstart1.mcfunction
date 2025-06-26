@@ -7,3 +7,5 @@ scoreboard players set @e[type=armor_stand,tag=score] score -300
 scoreboard players set @e[type=armor_stand,tag=score] round 1
 scoreboard players set @a glass 0
 schedule function a:zzzstart2 60t
+execute as @a run trigger spec add 0
+execute as @a run trigger notspec add 0

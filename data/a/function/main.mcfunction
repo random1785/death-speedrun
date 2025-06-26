@@ -34,7 +34,7 @@ tellraw @a [{"bold":true,"color":"red","underline":true,"text":"Fully automatic 
 # create spawn platform
 schedule function a:zzzspawn 5t
 execute in the_nether run forceload add -13 -14 25 24
-place template a:lobbyoverworld -12 295 -14
+place template a:lobbyoverworld1 -12 295 -14
 setworldspawn 0 302 0
 spawnpoint @a 0 302 0
 tp @a 0 302 0
@@ -51,3 +51,9 @@ execute unless entity @e[type=minecraft:armor_stand,limit=1,tag=score] run summo
 scoreboard players set @e[type=armor_stand,tag=score] round 0
 
 function a:zzzfiveschecker
+
+# spectator stuff
+scoreboard objectives add spec trigger
+scoreboard objectives add notspec trigger
+scoreboard players enable @a spec
+scoreboard players enable @a notspec
