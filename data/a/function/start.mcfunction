@@ -1,4 +1,3 @@
-gamerule doImmediateRespawn true
 scoreboard players set @a death 1785
 time set 0
 clear @a

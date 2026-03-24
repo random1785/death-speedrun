@@ -1,13 +1,11 @@
 function a:murder
 scoreboard players reset *
-gamerule doImmediateRespawn true
 time set 0
 team add a
 team modify a collisionRule pushOwnTeam
 team modify a friendlyFire true
 team modify a color reset
 difficulty easy
-gamerule keepInventory false
 scoreboard objectives add score dummy
 scoreboard objectives add death deathCount
 scoreboard objectives add calc dummy
@@ -34,12 +32,16 @@ tellraw @a [{"bold":true,"color":"red","underline":true,"text":"Fully automatic 
 # create spawn platform
 schedule function a:zzzspawn 5t
 execute in the_nether run forceload add -13 -14 25 24
-place template a:lobbyoverworld1 -12 295 -14
+forceload add 0 0 -1 -1
+place template a:lobbyoverworld3v2 -12 294 -12
+fillbiome -11 298 -11 33 319 12 minecraft:cherry_grove
 setworldspawn 0 302 0
 spawnpoint @a 0 302 0
 tp @a 0 302 0
 gamemode survival @a
-gamerule spawnRadius 2
+schedule function a:maingmr7 1t
+schedule function a:maingmr5 2t
+schedule function a:maingmr11 3t
 
 # TEXT DISPLAYS
 kill @e[type=text_display]
