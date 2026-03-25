@@ -21,6 +21,7 @@ gamerule naturalRegeneration true
 gamerule doMobSpawning true
 gamerule doDaylightCycle true
 gamerule doWeatherCycle true
+gamerule locatorBar false
 team modify a friendlyFire true
 team modify a seeFriendlyInvisibles true
 team modify a nametagVisibility always

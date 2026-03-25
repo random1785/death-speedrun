@@ -24,6 +24,7 @@ gamerule spawn_mobs true
 gamerule spawn_monsters true
 gamerule advance_time true
 gamerule advance_weather true
+gamerule locator_bar false
 team modify a friendlyFire true
 team modify a seeFriendlyInvisibles true
 team modify a nametagVisibility always
