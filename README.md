@@ -1,5 +1,5 @@
 # death-speedrun
-Minecraft Datapack (works on any version past 1.18, last tested on 1.21.11) that makes players race each other to die!
+Minecraft Datapack (works on any version past 1.21.5, last tested on 26.2) that makes players race each other to die!
 
 ## Features:
 Timer determines how long players took to die<br/>
