@@ -51,6 +51,7 @@ summon text_display 0.50 302 -9.50 {Glowing:1b,line_width:600,text:[{"bold":true
 
 execute unless entity @e[type=minecraft:armor_stand,limit=1,tag=score] run summon minecraft:armor_stand 0 330 0 {NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["score"]}
 scoreboard players set @e[type=armor_stand,tag=score] round 0
+forceload add -1 -1 0 0
 
 function a:zzzfiveschecker
 
