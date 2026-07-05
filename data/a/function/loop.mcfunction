@@ -53,6 +53,17 @@ execute as @e[tag=score,scores={score=500..699}] run title @a[tag=!a] actionbar 
 execute as @e[tag=score,scores={score=700..799}] run title @a[tag=!a] actionbar {"score":{"name":"@s","objective":"score"},"color":"dark_gray"}
 execute as @e[tag=score,scores={score=800..}] run title @a[tag=!a] actionbar {"score":{"name":"@s","objective":"score"},"color":"black"}
 
+
+
+scoreboard players enable @a healthmessages
+execute as @a[scores={healthmessages=1..}] run scoreboard players add @s hpmsg 1
+execute as @a[scores={healthmessages=1..,hpmsg=2}] run scoreboard players set @s hpmsg 0
+tellraw @a[scores={healthmessages=1..,hpmsg=1}] [{"text":"Health messages are now enabled!","color":"dark_green"}]
+tellraw @a[scores={healthmessages=1..,hpmsg=0}] [{"text":"Health messages are now disabled!","color":"gray"}]
+scoreboard players reset @a[scores={healthmessages=1..}] healthmessages
+
+
+
 execute as @a[team=a,scores={death=18,health=1..500},tag=!a] if entity @e[tag=score,scores={score=0..}] run function a:victory
 tag @a[scores={death=18,health=1..500},tag=!a] add a
 tag @a[tag=!new] add new

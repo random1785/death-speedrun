@@ -1,4 +1,5 @@
 function a:murder
+schedule function a:zzzhealthshower 40t
 scoreboard players reset *
 time set 0
 team add a
@@ -8,6 +9,7 @@ team modify a color reset
 difficulty easy
 scoreboard objectives add score dummy
 scoreboard objectives add death deathCount
+scoreboard objectives add hp health
 scoreboard objectives add calc dummy
 scoreboard objectives add health dummy
 scoreboard objectives add round dummy
@@ -22,6 +24,8 @@ scoreboard objectives add overkill dummy
 scoreboard objectives add temp dummy
 scoreboard objectives add pcount dummy
 scoreboard objectives add tpcount dummy
+scoreboard objectives add healthmessages trigger
+scoreboard objectives add hpmsg dummy
 scoreboard objectives add glass minecraft.mined:minecraft.glass
 scoreboard objectives setdisplay sidebar health
 scoreboard players set @a death 1785

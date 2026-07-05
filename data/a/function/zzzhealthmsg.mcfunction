@@ -1,0 +1,1 @@
+tellraw @a [{"text":"Health messages (for spectators) have been enabled! To hide/toggle them, run ","color":"dark_green","bold":true},{"text":"/trigger healthmessages.","underlined":true,"color":"gold"}]
