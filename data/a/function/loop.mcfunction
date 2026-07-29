@@ -36,12 +36,12 @@ execute as @e[tag=score,type=armor_stand,scores={score=-150}] run effect give @a
 execute as @e[tag=score,type=armor_stand,scores={score=-100}] run effect give @a minecraft:instant_health 1 15 true
 execute as @e[tag=score,type=armor_stand,scores={score=-50}] run effect give @a minecraft:instant_health 1 15 true
 execute as @e[tag=score,type=armor_stand,scores={score=-10}] run effect give @a minecraft:instant_health 1 15 true
-execute as @e[tag=score,type=armor_stand,scores={score=-160..0}] run execute as @e[tag=start,type=armor_stand] at @s run execute as @a[gamemode=survival,distance=1..] run tag @s add botch
-execute as @e[tag=score,type=armor_stand,scores={score=-160..0}] run execute as @e[tag=start,type=armor_stand] at @s run execute as @a[gamemode=survival,distance=1..] run function a:zzzbotched
+execute as @e[tag=score,type=armor_stand,scores={score=-160..0}] run execute as @e[tag=start,type=armor_stand] at @s run execute as @a[gamemode=survival,distance=1..,scores={1..500}] run tag @s add botch
+execute as @e[tag=score,type=armor_stand,scores={score=-160..0}] run execute as @e[tag=start,type=armor_stand] at @s run execute as @a[gamemode=survival,distance=1..,scores={1..500}] run function a:zzzbotched
 execute as @e[tag=score,type=armor_stand,scores={score=-160..0}] run execute as @a[scores={death=18..},gamemode=survival] run tag @s add botchd
 execute as @e[tag=score,type=armor_stand,scores={score=-160..0}] run execute as @a[scores={death=18..},gamemode=survival] run function a:zzzdied
 
-execute as @a[scores={health=1..500}] if entity @e[tag=score,type=armor_stand,scores={score=-5..-1}] run execute at @s run spawnpoint @s ~ ~50 ~
+execute as @e[tag=score,type=armor_stand,scores={score=-5}] at @e[tag=start,limit=1] run spawnpoint @a ~ ~50 ~
 execute as @e[tag=score,type=armor_stand,scores={score=-5}] run execute as @e[tag=start] run kill @s
 
 execute as @e[tag=score,scores={score=0..99}] run title @a[tag=!a] actionbar {"score":{"name":"@s","objective":"score"},"color":"aqua"}
